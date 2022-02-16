@@ -1,5 +1,5 @@
 
-<!-- 1.00 Pset 1 -------------------------------- -->
+<!-- 1.00 Pset 1 Question 4 -------------------------------- -->
 
 <!DOCTYPE html>
 <html>
@@ -39,7 +39,7 @@
 <body>
   <div id="map"></div>
   <div class="map-overlay top">
-    MBTA BUS ROUTE 47 TRACKING 
+    MBTA BUS ROUTE 1 TRACKING 
   </div>
   <div class = "map-overlay-sub">
     Please allow around 15 seconds between location updates
@@ -62,7 +62,7 @@
     }
 
   async function getBusLocations(){
-      const url='https://api-v3.mbta.com/vehicles?filter[route]=47&include=trip';
+      const url='https://api-v3.mbta.com/vehicles?filter[route]=1&include=trip';
       const response = await fetch(url);
       const json = await response.json();
       return json.data;
@@ -78,6 +78,9 @@
         center: [-71.0906, 42.3616], //center on MIT campus
         zoom: 12
     });
+    var marker0 = new mapboxgl.Marker();
+        .setLngLat([-71.0906, 42.3616]);
+        .addTo(map);
 
     // create map markers
     var marker1 = new mapboxgl.Marker({color: '#fbc32c'})
