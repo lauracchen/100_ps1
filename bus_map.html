@@ -39,7 +39,7 @@
 <body>
   <div id="map"></div>
   <div class="map-overlay top">
-    MBTA BUS ROUTE 1 TRACKING 
+    MBTA BUS ROUTE 47 TRACKING 
   </div>
   <div class = "map-overlay-sub">
     Please allow around 15 seconds between location updates
@@ -62,7 +62,7 @@
     }
 
   async function getBusLocations(){
-      const url='https://api-v3.mbta.com/vehicles?filter[route]=1&include=trip';
+      const url='https://api-v3.mbta.com/vehicles?filter[route]=47&include=trip';
       const response = await fetch(url);
       const json = await response.json();
       return json.data;
